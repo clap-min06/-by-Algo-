@@ -1,5 +1,4 @@
 import streamlit as st
-from PIL import Image
 
 # 1. 한글 자음, 모음마다 획수가 몇 개인지 적어둔 '족보'입니다.
 # (초성, 중성, 종성 순서대로 리스트를 만듭니다)
@@ -101,28 +100,26 @@ if st.button("💘 궁합 결과 보기"):
         
         # 결과 점수 크게 보여주기
         st.markdown(f"<h1 style='text-align: center; color: #ff4b4b;'>{final_score}%</h1>", unsafe_allow_html=True)
-
-        #그림을 미리 강제로 연다
-        img = Image.open("algo_logo.jpg")
         
         # 점수에 따른 멘트 보여주기
         if final_score >= 90:
             st.balloons() # 풍선 효과 팡팡!
             st.success("와우! 천생연분입니다! 결혼하세요! 💍")
-            st.image(img)
+            st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_logo.jpg?raw=true")
         elif final_score >= 70:
             st.info("꽤 잘 어울리는 한 쌍이네요! 🥰")
-            st.image(img)
+            st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_logo.jpg?raw=true")
         elif final_score >= 40:
             st.warning("노력이 조금 필요해 보입니다... 화이팅! 😂")
-            st.image(img)
+            st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_logo.jpg?raw=true")
         else:
             st.error("앗... 우리 그냥 좋은 친구 할까요? 😭")
-            st.image(img)
+            st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_logo.jpg?raw=true")
             
     else:
         # 이름을 안 썼을 때 혼내기
         st.warning("두 사람의 이름을 모두 입력해주세요!")
+
 
 
 
