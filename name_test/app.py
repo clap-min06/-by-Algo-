@@ -77,7 +77,7 @@ def calculate_love_score(name1, name2):
 # --- 여기부터 5단계 코드 (화면 만들기) ---
 
 # 1. 제목과 설명 적기
-st.title("그 때...ㄱ...ㄴrㄴl..? 두근두근 이름 궁합 테스트 ❤")
+st.title("그 때..ㄱ...ㄴrㄴl..? 두근두근 이름 궁합 테스트 ❤")
 st.write("우리 사이... 과연 몇 점일까? 획수로 알아보는 재미있는 궁합!")
 
 # 2. 이름 입력받는 칸 만들기 (화면을 반으로 나눠서)
@@ -100,28 +100,35 @@ if st.button("💘 궁합 결과 보기"):
         
         # 결과 점수 크게 보여주기
         st.markdown(f"<h1 style='text-align: center; color: #ff4b4b;'>{final_score}%</h1>", unsafe_allow_html=True)
-
-        st.link_button("📸 Algo 인스타 구경가기", "https://www.instagram.com/algoai.kr")
-        st.write("")
+        
         
         # 점수에 따른 멘트 보여주기
         if final_score >= 90:
             st.balloons() # 풍선 효과 팡팡!
             st.success("와우! 천생연분입니다! 결혼하세요! 💍")
+            st.write("")
+            st.link_button("📸 Algo 인스타 구경가기", "https://www.instagram.com/algoai.kr")
             st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_design.jpg?raw=true")
         elif final_score >= 70:
             st.info("꽤 잘 어울리는 한 쌍이네요! 🥰")
+            st.write("")
+            st.link_button("📸 Algo 인스타 구경가기", "https://www.instagram.com/algoai.kr")
             st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_design.jpg?raw=true")
         elif final_score >= 40:
             st.warning("노력이 조금 필요해 보입니다... 화이팅! 😂")
+            st.write("")
+            st.link_button("📸 Algo 인스타 구경가기", "https://www.instagram.com/algoai.kr")
             st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_design.jpg?raw=true")
         else:
             st.error("앗... 우리 그냥 좋은 친구 할까요? 😭")
+            st.write("")
+            st.link_button("📸 Algo 인스타 구경가기", "https://www.instagram.com/algoai.kr")
             st.image("https://github.com/clap-min06/-by-Algo-/blob/main/name_test/algo_design.jpg?raw=true")
             
     else:
         # 이름을 안 썼을 때 혼내기
         st.warning("두 사람의 이름을 모두 입력해주세요!")
+
 
 
 
