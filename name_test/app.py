@@ -1,5 +1,5 @@
 import streamlit as st
-From PIL import Image
+from PIL import Image
 
 # 1. 한글 자음, 모음마다 획수가 몇 개인지 적어둔 '족보'입니다.
 # (초성, 중성, 종성 순서대로 리스트를 만듭니다)
@@ -123,6 +123,7 @@ if st.button("💘 궁합 결과 보기"):
     else:
         # 이름을 안 썼을 때 혼내기
         st.warning("두 사람의 이름을 모두 입력해주세요!")
+
 
 
 
